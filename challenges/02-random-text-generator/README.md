@@ -5,13 +5,13 @@ Task: Create a function that takes in a number, and returns a randomly generated
 Goal: Program that creates the most consistently coherent phrases "wins", honourable mentions for absurdly hilarious outputs
 
 Restrictions:
-[*] NO STRING/CHARACTER LITERALS NOR USER DEFINED STRINGS
-    [*] That includes fancy shmancy workarounds like storing a bunch of numbers and converting them to letters
-[*] NO FILE/USER INPUT EXCEPT LOADING STANDARD LIBRARY MODULES
-[*] NO NON-STANDARD LIBRARY MODULES
-[*] NO NETWORKING - AT ALL
+* NO STRING/CHARACTER LITERALS NOR USER DEFINED STRINGS
+    * That includes fancy shmancy workarounds like storing a bunch of numbers and converting them to letters
+* NO FILE/USER INPUT EXCEPT LOADING STANDARD LIBRARY MODULES
+* NO NON-STANDARD LIBRARY MODULES
+* NO NETWORKING - AT ALL
 
-    > Yep. You read that right. You'll have to look deep *inside* for some words to jumble together.
+Yep. You read that right. You'll have to look deep *inside* for some words to jumble together.
 
 Submission guidelines:
 
