@@ -14,6 +14,9 @@ If any input is not entered in correct reverse polish notation:
     If more than (the amount of operators + 1) of digits are entered no
     exceptions will be raised but the returned value could be anything.
     If too many operators are entered IndexError will be raised.
+    
+EDITOR NOTE:
+Breaks 'no list' restriction, but creative solution nonetheless!
 """
 def c(i,s=()):
  for t in i.split():
