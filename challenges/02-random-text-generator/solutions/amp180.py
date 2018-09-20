@@ -274,4 +274,4 @@ def get_words(n: int):
      )
 
 
-print(get_words(10))
+print(get_words(TEN))
