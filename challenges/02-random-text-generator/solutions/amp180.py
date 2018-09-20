@@ -5,6 +5,7 @@
 import string
 import random
 
+# Constants
 ZERO = int()
 ONE = len([None,])
 TWO = ONE + ONE
@@ -14,6 +15,7 @@ SPACE = string.whitespace[ZERO]
 
 
 class ReprMixin():
+    # Make the repr string into a space-separated string of variable names.
     def __repr__(self):
         words = str()
         for k in self.__class__.__dict__.keys():
@@ -23,6 +25,8 @@ class ReprMixin():
 
 
 class EnterShikari_RabbleRouser_2017(ReprMixin):
+    # I heard song lyrics make good variable names.
+    
     I = ...
     torture = ...
     rock = ...
@@ -266,6 +270,7 @@ class EnterShikari_RabbleRouser_2017(ReprMixin):
 
 
 def get_words(n: int):
+    # Get a string of random words, n words long.
     return SPACE.join(
         random.sample(
             repr(EnterShikari_RabbleRouser_2018()).split(SPACE),
