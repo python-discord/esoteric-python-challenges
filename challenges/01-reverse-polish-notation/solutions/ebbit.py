@@ -18,8 +18,8 @@ If any input is not entered in correct reverse polish notation:
 EDITOR NOTE:
 Breaks 'no list' restriction, but creative solution nonetheless!
 """
-def c(i,s=()):
- for t in i.split():
+def c(i,s=(),e=lambda i,f:(x for x,t in enumerate(i[f:])if t==" ")):
+ for t in(i[x:x+next(e(i+" ",x))]for x in e(" "+i,0)):
   try:s+=(int(t),)
   except:s=s[:-2]+(eval("s[-2]"+{"+":"+","−":"-","÷":"//","×":"*"}[t]+"s[-1]"),)
  return s[0]
@@ -29,11 +29,16 @@ def calc(inp):
     #define stack as empty tuple
     stack = ()
 
+    #define enum as a function that returns a generator over the
+    #indexes of all the spaces in inp starting from first
+    def enum(inp, first):
+        return (x for x, token in enumerate(inp[first:]) if (t == " "))
+
     #define operators mapped to their their python equivalents
     operator = {"+": "+", "−": "-", "÷": "//", "×": "*"}
 
     #for each item in the input delimited by spaces
-    for token in inp.split():
+    for token in (i[x:x + next(enum(i + " ", x))] for x in enum(" " + i, 0)):
 
         #append value to stack as an integer
         try:
