@@ -1,0 +1,41 @@
+# I'm sorry
+
+# This breaks the string literal rule, but has the same effect as a direct import, so I'm not concerned
+
+# Python < 3.7
+# pip install coconut[all]
+
+# Python 3.7 (cpyparsing is not supported yet, will be slower)
+# pip install coconut
+
+# Run with
+# coconut-run dapper-1.coco
+
+# Sorry, not sorry
+
+line_gen = ((t, r, st) ->
+    ((tran, text) ->
+        (derot ->
+            (lines ->
+                (raw_lines ->
+                    (raw_words ->
+                        (words ->
+                            (shuf ->
+                                ((sli, sli_len) ->
+                                    (raw_sent ->
+                                        (sentences ->
+                                            [sent[0].upper() + sent[1:] for sent in sentences]
+                                        )(derot[3].join(ss) + r.choice((derot[63], derot[63] * 2, derot[855], derot[477] + derot[475:477])) for ss in raw_sent)
+                                    )([sli[i:i + sli_len] for i in range(0, len(sli), sli_len)])
+                                )(shuf[:(len(shuf) |> r.randrange)], r.randrange(3, 15))
+                            )(r.sample(r.sample(words * 3, k=len(words) * 3), k=len(words) * 3))
+                        )(list(map(w -> w.lower(), filter(w -> w != str(), raw_words))))
+                    )(reduce((l, ll) -> (l, ll) |*> (+), raw_lines))
+                )(map((raw -> [s.strip(st.punctuation + st.whitespace) for s in raw.lower().split()]), lines))
+            )(filter(s -> s != str(), derot.splitlines()))
+        )(text.translate(tran))
+    )(str.maketrans(t.d), t.s)
+)((def -> sys = __import__("sys"); io = __import__("io"); old = sys.stdout; sys.stdout = io.StringIO(); __ = __import__("this"); sys.stdout = old; __)(), __import__("random"), __import__("string"))
+
+for l in line_gen:
+    print(l)
