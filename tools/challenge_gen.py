@@ -53,7 +53,7 @@ if __name__ == "__main__":
         pass
     # Copy the template and test cases into the challenge folder
     shutil.copy(readme_template, new_dir_path)
-    shutil.copy(testrunner, new_dir_path)
-    shutil.copy(testcases, new_dir_path)
+    shutil.copy(testrunner, solutions_dir)
+    shutil.copy(testcases, solutions_dir)
 
     print(f"Deployed template for {dir_name}")
