@@ -16,14 +16,13 @@ TODO
 
 TODO
 
-## More info.
+## More Info.
 
 TODO
 
 ## Submissions Guidelines
 
-* Submit your code as a python file named `<yourname>.py`. If your implementation is too big or you simply prefer splitting the code into several files, submit a directory named `<yourname>` with the code inside.
-* Add comments that document what language you have implemented (if not your own), how the language works, and how to use the implementation.
+* Submit your code as a python file named `<yourname>.py`. If your implementation is too big or you simply prefer splitting the code into several files, submit a directory named `<yourname>` with the code inside. See the `README.md` file in the root of the repository for more information on contributing solutions.
 
 ## Tips & Ideas
 
