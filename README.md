@@ -29,6 +29,8 @@ You may submit more than one solution for a challenge! Just append subsequent so
 
 To contribute solutions, you will need a [GitLab](http://gitlab.com/) account and [Git](https://git-scm.com/) installed on your computer. The instructions assume you are using the command line. See the documentation specific to your software if you are using a graphical Git client.
 
+> If you need any help at all with the contribution process, do not hesitate to ask for help on the Discord server!
+
 Step 1: Fork and clone the repository
 
 Head to https://gitlab.com/python-discord/esoteric-python-challenges and click the `Fork` button. This will copy this repository to your account. Then, clone your version of the repository locally:
@@ -59,6 +61,6 @@ Step 5: Wait
 
 A repository maintainer will get to your merge request in the briefest of delays and (hopefully) merge it! Don't hesitate to ping Zhawn if your merge request hasn't been accepted within a couple of days!
 
-## Licensing Information
+# Licensing Information
 
-By contributing to this repository, you understand and agree that all code in this repository is licensed under the [GNU General Public License, Version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html). 
+## By contributing to this repository, you understand and agree that all code in this repository is licensed under the [GNU General Public License, Version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html). 
