@@ -25,3 +25,8 @@ Tips:
 to generate the same output again should you come across some good results on a particular run.
 
 Special thanks to Lemon for the idea <3
+
+
+# Licensing Information
+
+## By contributing to this repository, you understand and agree that all code in this repository is licensed under the [GNU General Public License, Version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html). 
