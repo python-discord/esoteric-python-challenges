@@ -22,3 +22,9 @@ You can submit more than one solution. Feel free to look around for inspiration 
 Feel free to collaborate since there's no real prize other than knowing you wrote some horrible code and that Pep8 weeps in the distance.
 
 Either submit a pull request with your solution under `yourname.py` or share code directly in chat or via a hosting service if it's too long (e.g. gist). Tag your post with #challenge1 so we can easily search through the chat!
+
+
+
+# Licensing Information
+
+## By contributing to this repository, you understand and agree that all code in this repository is licensed under the [GNU General Public License, Version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html). 

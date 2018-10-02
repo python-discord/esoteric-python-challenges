@@ -48,3 +48,8 @@ Since this challenge is more involved than the ones I usually post, feel free to
 * [The Super Tiny Compiler on Github](https://github.com/jamiebuilds/the-super-tiny-compiler) Albeit being written in JavaScript, this short write-up describes in a simple way the general phases that a compiler goes through to go from source to end product. Can be useful if you want to write a lexer/Abstract Syntax Trees and need a little inspiration
 
 Happy Hacking ❤️ Shawn aka Zhawn
+
+
+# Licensing Information
+
+## By contributing to this repository, you understand and agree that all code in this repository is licensed under the [GNU General Public License, Version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html). 
