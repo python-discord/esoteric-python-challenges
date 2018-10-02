@@ -1,3 +1,5 @@
+> ! Important: As of October 2, 2018, this repository and all its contents are now under the GNU General Public License Version 3 (GPLv3) See the LICENSE file for more information
+
 # Esoteric Python Challenges
 
 Esoteric programming challenges for the Python programming language.
@@ -23,18 +25,40 @@ At the top of the file, add a comment block with your name, and any notes regard
 
 You may submit more than one solution for a challenge! Just append subsequent solutions to the same file.
 
-## Option A: Create a merge request
+## Adding your solution to the repository:
 
-* Clone the repository locally
-* In the relevant challenge directory, add your solution as a `.py` file named as `your_name.py`, `your_name` being whatever handle you wish to be referred to as.
-* Submit a merge request
-* (Optionally, ping Shawn on Discord if your MR goes unnoticed for a little while!)
+To contribute solutions, you will need a [GitLab](http://gitlab.com/) account and [Git](https://git-scm.com/) installed on your computer. The instructions assume you are using the command line. See the documentation specific to your software if you are using a graphical Git client.
 
-## Option B: Get Shawn to add it
+Step 1: Fork and clone the repository
 
-If you're not comfortable using Git or simply don't want to bother cloning the repository, you can submit your code as a snippet in the Discord chat (`#esoteric-python`), tagging your post with
-the challenge number and pinging Shawn and I'll get around to put it up for you as soon as I am able :)
+Head to https://gitlab.com/python-discord/esoteric-python-challenges and click the `Fork` button. This will copy this repository to your account. Then, clone your version of the repository locally:
+
+Open a terminal and type
+> `git clone https://gitlab.com/python-discord/esoteric-python-challenges.git` 
+
+
+Step 2: Adding your solution
+
+In the appropriate directory for the challenge, under the `solutions` folder, add either
+* A) A single `.py` file with the name `your_name_or_handle.py`
+* B) If your solution spans multiple files, *add a directory* named `your_name_or_handle` and place the files inside this new directory
+> Important: Try not modifying any other files, as it complicates the merging process
+
+Step 3: Add and commit your changes
+
+Run the following commands on your local repository:
+* `git add .` This adds all modified files to the staging area
+* `git commit -m "message"` This commits the changes. Replace "message" with a short description such as `-m "add bob's solution"
+* `git push` This will apply the changes to (your) *remote* repository (i.e. the version you can see on GitLab)
+
+Step 4: Submit a merge request
+
+Head over to the [New Merge Request](https://gitlab.com/python-discord/esoteric-python-challenges/merge_requests/new) page and use the graphical interface to chose your personal copy of the repository and proceed by clicking `Compare branches and continue` and confirm your request
+
+Step 5: Wait
+
+A repository maintainer will get to your merge request in the briefest of delays and (hopefully) merge it! Don't hesitate to ping Zhawn if your merge request hasn't been accepted within a couple of days!
 
 ## Licensing Information
 
-All solutions submitted to this repository will be licensed and freely available under the MIT License. By submitting an entry, you acknowledge that your code may be used by others.
+By contributing to this repository, you understand and agree that all code in this repository is licensed under the [GNU General Public License, Version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html). 
