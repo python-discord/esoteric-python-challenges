@@ -41,6 +41,8 @@ if __name__ == "__main__":
     new_dir_path = os.path.join(current_dirname, '..', 'challenges', dir_name)
     solutions_dir = os.path.join(new_dir_path, 'solutions')
     readme_template = os.path.join(current_dirname, 'templates', 'README.md')
+    testrunner = os.path.join(current_dirname, 'templates', 'test_runner.py')
+    testcases = os.path.join(current_dirname, 'templates', 'testcases.json')
 
     # Create challenge directory
     os.mkdir(new_dir_path)
@@ -49,7 +51,9 @@ if __name__ == "__main__":
     # Add an __init__.py mostly to force commit of otherwise empty dir
     with open(os.path.join(solutions_dir, '__init__.py'), "w") as _:
         pass
-    # Copy the readme template into the challenge folder
+    # Copy the template and test cases into the challenge folder
     shutil.copy(readme_template, new_dir_path)
+    shutil.copy(testrunner, new_dir_path)
+    shutil.copy(testcases, new_dir_path)
 
     print(f"Deployed template for {dir_name}")

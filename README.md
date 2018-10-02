@@ -17,6 +17,32 @@ of the limitations of your solutions in a comment in the source code! The ultima
 winners. You win if you had fun trying to solve some challenges or learn a thing or two from other peoples' solutions :) Feel free to golf your solutions to non-golf challenges or to add further 
 restrictions for your own challenge.
 
+# Test Cases
+
+Challenges generally include Test Cases to help you validate your solution.
+
+`test_runner.py` is a very simple test case runner written for these challenges
+`testcases.json` is a simple JSON file containing a list of objects with two fields: `input` and `expected_output`
+
+To test your code, simply `import` the test_runner functions into your code. Two basic functions are provided: `test()` and `case()`.
+
+`test(solution_function)` takes one argument: the main function from your solution where the input is inserted. The test runner will run this function against all the test cases present in the testcases file and output a simple report of which tests succeeded and which ones failed. For the failed test cases, details about the expected output vs the actual output will be shown.
+
+`case(number, solution_function)` is to test against a particular test case. Useful when there are either a lot of test cases, the code takes a while to run or you simply want less clutter. The first argument in this case is the number of the test case (which is its index in the list of test cases, you can find it in the report given by `test`)
+
+Feel free to add your own test cases to the file, but please *don't* include the modified `testcases.json` in your merge request.
+
+Quick, simple example:
+```python
+from test_runner import test, case
+
+def my_solution(x, y):
+    return x*y
+
+test(my_solution)
+
+case(1, my_solution)
+```
 # Submission Guidelines
 
 At the top of the file, add a comment block with your name, and any notes regarding your solution (e.g. restrictions not followed, instructions on how to use the code, etc.)

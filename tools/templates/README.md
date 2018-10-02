@@ -34,6 +34,20 @@ TODO
 
 Happy Hacking ❤️ Shawn aka Zhawn
 
+## Test Cases
+
+To test your code against test cases (see `README.md` in root of repository for more information on the test runner):
+
+```python
+from test_runner import test, case
+
+def my_solution(x, y):
+    return x*y
+
+test(my_solution)
+
+case(1, my_solution)
+```
 
 # Licensing Information
 
