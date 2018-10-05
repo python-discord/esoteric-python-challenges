@@ -1,0 +1,34 @@
+// Py-LCI grammar
+
+// LALR parser
+
+?start: expr
+      | bind
+
+?expr: "(" expr ")"
+     | expr expr_no_recurse -> apply
+     | abstract
+     | var
+
+?expr_no_recurse: "(" expr ")"
+                | abstract
+                | var
+
+?abstract: ("λ" | "\\") hvar+ "." expr
+
+bind: IDENT "=" (abstract | ("(" abstract ")"))
+
+?var: constant
+    | IDENT -> name
+    | NUMBER -> num
+
+hvar: IDENT
+
+!constant: "true" | "false" | "if" | "and" | "or" | "not" | "succ"
+
+IDENT: /[^.\\\sλ0-9]/
+
+NUMBER: /[0-9]+/
+
+%ignore WS
+%import common.WS
