@@ -8,8 +8,9 @@ It's been a while, but the official esoteric challenges are back! For this chall
 
 If you're just starting out with esoteric programming, you could create some unusual code to produce the following basic outputs:
 
-Input: `7`
-Output: ```
+Input: 7
+Output:
+```
  ## ##
 #  #  #
 #     #
@@ -18,8 +19,9 @@ Output: ```
    #
 ```
 
-Input: `13`
-Output: ```
+Input: 13
+Output:
+```
  ####   ####
 #    # #    #
 #     #     #
