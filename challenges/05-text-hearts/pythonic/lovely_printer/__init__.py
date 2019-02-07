@@ -20,7 +20,7 @@ TEMPLATE_HEART = dedent('''
 
 def to_hearts(text):
     chars = cycle(list(text))
-    num_hearts = (len(text) // len(TEMPLATE_HEART)) + 1
+    num_hearts = (len(text) // TEMPLATE_HEART.count('#')) + 1
     for heart in range(num_hearts):
         lines = []
         for line in TEMPLATE_HEART.split('\n'):
