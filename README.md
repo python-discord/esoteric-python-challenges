@@ -53,17 +53,18 @@ You may submit more than one solution for a challenge! Just append subsequent so
 
 ## Adding your solution to the repository:
 
-To contribute solutions, you will need a [GitLab](http://gitlab.com/) account and [Git](https://git-scm.com/) installed on your computer. The instructions assume you are using the command line. See the documentation specific to your software if you are using a graphical Git client.
+To contribute solutions, you will need a [GitHub](https://github.com/) account and [Git](https://git-scm.com/) installed on your computer. The instructions assume you are using the command line. See the documentation specific to your software if you are using a graphical Git client.
 
 > If you need any help at all with the contribution process, do not hesitate to ask for help on the Discord server!
 
 Step 1: Fork and clone the repository
 
-Head to https://gitlab.com/python-discord/esoteric-python-challenges and click the `Fork` button. This will copy this repository to your account. Then, clone your version of the repository locally:
+Head to https://github.com/python-discord/esoteric-python-challenges/ and click the `Fork` button. This will copy this repository to your account. Then, clone your version of the repository locally:
 
 Open a terminal and type
-> `git clone https://gitlab.com/python-discord/esoteric-python-challenges.git` 
+> `git clone https://github.com/<your-username>/esoteric-python-challenges.git`
 
+Be sure to replace `<your-username>` with your actual GitHub username.
 
 Step 2: Adding your solution
 
@@ -76,16 +77,16 @@ Step 3: Add and commit your changes
 
 Run the following commands on your local repository:
 * `git add .` This adds all modified files to the staging area
-* `git commit -m "message"` This commits the changes. Replace "message" with a short description such as `-m "add bob's solution"
-* `git push` This will apply the changes to (your) *remote* repository (i.e. the version you can see on GitLab)
+* `git commit -m "message"` This commits the changes. Replace "message" with a short description such as `-m "add bob's solution"`
+* `git push` This will apply the changes to (your) *remote* repository (i.e. the version you can see on GitHub)
 
-Step 4: Submit a merge request
+Step 4: Submit a pull request
 
-Head over to the [New Merge Request](https://gitlab.com/python-discord/esoteric-python-challenges/merge_requests/new) page and use the graphical interface to chose your personal copy of the repository and proceed by clicking `Compare branches and continue` and confirm your request
+Head over to the [New Pull Request](https://github.com/python-discord/esoteric-python-challenges/compare) page, then click the `compare across forks` link and select your own fork as the head repository. You may then proceed to create the pull request.
 
 Step 5: Wait
 
-A repository maintainer will get to your merge request in the briefest of delays and (hopefully) merge it! Don't hesitate to ping Zhawn if your merge request hasn't been accepted within a couple of days!
+A repository maintainer will get to your pull request in the briefest of delays and (hopefully) merge it! Don't hesitate to ping Zhawn or Juanita if your pull request hasn't been accepted within a couple of days!
 
 # Licensing Information
 
