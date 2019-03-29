@@ -26,6 +26,7 @@ for _ in range(3):
 >>> True
 >>> True
 >>> True
+```
 """
 import inspect
 import sys
