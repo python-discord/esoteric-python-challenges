@@ -31,12 +31,15 @@ import inspect
 import sys
 import traceback
 
+from random import randint
+
 
 def Maybe():
     return repr(bool(randint(0, 1)))
 
 
 def __parse_code(lines):
+    """Replaces `Maybe` with a random bool in every line"""
     newcode = ''
     for line in lines:
         newline = line.replace('Maybe', Maybe(), 1)
@@ -49,6 +52,7 @@ def __parse_code(lines):
 
 
 def __format_tb():
+    """Mock the Exception traceback (not perfect)"""
     tb = traceback.format_exc().splitlines()
     head, _, _, *body = tb
     body = [line.replace('<string>', mod.__file__) for line in body]
