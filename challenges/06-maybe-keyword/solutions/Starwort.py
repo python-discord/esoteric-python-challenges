@@ -11,8 +11,10 @@ class _Maybe:
         return random.choice([True, False]).__getattribute__(*args, **kwargs)
 
     def __del__(self):
-        print('SyntaxError')
-        __import__('os')._exit(1)
+        import sys
+        if sys.meta_path is not None:  # squash interpreter errors
+            import os
+            os._exit(1)
 
 class MaybeWrapper:
     Maybe = _Maybe()
