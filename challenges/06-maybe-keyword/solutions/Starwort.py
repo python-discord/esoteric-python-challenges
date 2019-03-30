@@ -16,6 +16,12 @@ class _Maybe:
             import os
             os._exit(1)
 
+    def __bool__(self):
+        return random.choice([True, False])
+
+    def __eq__(self, other):
+        return random.choice([True, False]) == other
+
 class MaybeWrapper:
     Maybe = _Maybe()
 
