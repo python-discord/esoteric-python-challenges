@@ -12,19 +12,17 @@ print(['No '    +  'One'    ,'X','O'    ] [  (  lambda     x=
                 lambda i                =input(
  'XO'[f[1]-1]+': '):0if[any([0if x in map(chr,range(48,58))else
                 1    for                x in i]
-  )if    len(i  )else 1] [0]else   [c   .append     (int     (i)),
-    1][1]if     int(i)>=   0and  int    (i) <=8       and    ' '
-     == u[      int(i) ]    else 0      )( ),1)         ],c[0]]
-      [2]       )() ), (     lambda     :[f.pop           (0),
-   ['/'  ],f    .insert(   0,f    [0]   )   ]if        1in[  all(
- [u[      int(  x)]=='XO' [f       [1]  -1 ]for     x in       str([
+  )if    len(i  )else 1]  [0]else   [c  .append     (int     (i)),
+    1][1]if     int(i)>=    0and  int   (i) <=8       and    ' '
+     == u[      int(i) ]     else 0     )( ),1)         ],c[0]]
+      [2]       )() ), (      lambda    :[f.pop           (0),
+   ['/'  ],f    .insert(    0,f    [0]  )   ]if        1in[  all(
+ [u[      int(  x)]=='XO'  [f       [1] -1 ]for     x in       str([
 
 
  *map(ord,'ÒřʦɶơĂ͈ö')    ][y])])for y in    range(8)] else 0)
         (),f.               append        ([0,
-	    2,1][               f.pop(        1)])
-		]if 0               ==f[0]        else
-		f[0])               :0if x         [-1]not in[1,2]else 
-		               x[-1])()],'Wins')
- 
- #this is a game of tic-tac-toe. Its supposed to look like a tic-tac-toe board in theory
+        2,1][               f.pop(        1)])
+        ]if 0               ==f[0]        else
+        f[0])               :0if x         [-1]not in[1,2]else 
+                       x[-1])()],'Wins')
