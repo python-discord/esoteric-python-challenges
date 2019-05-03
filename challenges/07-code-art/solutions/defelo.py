@@ -15,8 +15,8 @@ for(i)in[*range(n)]:p=print;c=  (i
 *1  /1  **              11  );  (x
 )=  r;  h=chr(int(r));f=(2  +3  *2
 *5  )+                      0;  (s
-)=  chr(f);X=h+h+s+s;p(X*a++2*  (h
-+s                              )[
-c]*(n-2*[0,a][a>0]-2*b)+X[::-1]*b)
+)=  chr(f);X=h+h+s+s;p(X*a+2*(  h+
+s)                              [c
+]*(n-2*[0,a][a>=1]-2*b)+X[::-1]*b)
 
 # This one has size 17
