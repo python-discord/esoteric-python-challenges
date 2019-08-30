@@ -1,3 +1,7 @@
+# Stack-Based Esolang Based On NANDs
+# Documentation and Examples at github.com/EdgyNerd/Nandy
+
+
 from textwrap import wrap
 
 def NANDy(prog, inp=''):
