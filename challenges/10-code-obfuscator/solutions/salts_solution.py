@@ -34,11 +34,12 @@ There's a catch, of course.  OCR isn't perfect: You may end up with missing or
 wrong characters.  I also doubt this qualifies as "keeping functionality
 intact", but I enjoyed it.
 """
+
+import subprocess
+import numpy as np
+from PIL import Image
 import networkx as nx
 import pytesseract
-import subprocess
-from PIL import Image
-import numpy as np
 
 graph_order_and_image_dim = 100 #Increase for long strings
 
