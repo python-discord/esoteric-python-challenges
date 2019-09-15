@@ -8,19 +8,24 @@ This obfuscation isn't too esoteric, but it's fun nonetheless:
     We convert our string into an image with imagemagick.
     We convert the image into a numpy array.
     We use the numpy array as an adjacency matrix to make a graph.
-    The edge list for our graph is our obfuscated string.
+    The dictionary (of dictionaries) of the graph is our obfuscated string.
 
-The obfuscated string can be quite long. For instance, the input "testing"
-gives len(obfuscated_string) == 9526. A piece of it looks like:
+For the input "testing" we have:
 
->>>obfuscated_string[1000:1020]
 
-[(11, 58), (11, 59), (11, 60), (11, 61), (11, 62), (11, 65), (11, 66),
- (11, 67), (11, 68), (11, 69), (11, 70), (11, 71), (11, 72), (11, 73),
- (11, 76), (11, 77), (11, 78), (11, 79), (11, 82), (11, 83)]
+>>> obfuscated_string[10]
+
+{0: 1, 1: 1, 2: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 14: 1, 15: 1,
+ 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1,
+ 31: 1, 32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 41: 1, 42: 1, 43: 1,
+ 44: 1, 45: 1, 46: 1, 49: 1, 50: 1, 51: 1, 52: 1, 53: 1, 54: 1, 55: 1, 57: 1,
+ 58: 1, 59: 1, 60: 1, 61: 1, 62: 1, 66: 1, 67: 1, 68: 1, 69: 1, 70: 1, 71: 1,
+ 72: 1, 73: 1, 75: 1, 76: 1, 77: 1, 78: 1, 79: 1, 80: 1, 83: 1, 84: 1, 85: 1,
+ 86: 1, 87: 1, 88: 1, 89: 1, 90: 1, 94: 1, 95: 1, 96: 1, 97: 1, 98: 1, 99: 1}
+
 
 We can work backwards to get our original string :
-    Make a graph with our edge list.
+    Make a graph with our dictionary.
     Save graph's adjacency matrix as numpy array.
     Convert numpy array into an image.
     Use OCR to read the image as a string.
@@ -49,22 +54,20 @@ def obfuscator(a_string):
     #Turn our image into a numpy array
     string_as_image = Image.open(filename)
     string_as_array = np.array(string_as_image)
-    string_as_array[string_as_array > 0] = 1  #We just need an array of 1's and 0's
+    #We just need an array of 1's and 0's
+    string_as_array[string_as_array > 0] = 1
 
     #Turn our array into a graph by treating it as an adjacency matrix
     string_as_graph = nx.from_numpy_array(string_as_array,
                                           create_using=nx.DiGraph)
 
-    #Obfuscated string is just a list of the edges in this graph:
-    return list(string_as_graph.edges())
+    #Obfuscated string is a dictionary of dictionaries of this graph:
+    return nx.to_dict_of_dicts(string_as_graph, edge_data=1)
 
-def deobfuscator(list_of_tuples):
+def deobfuscator(dict_of_dicts):
     #====Work backwards====
-    #Build graph from edge list:
-    graph_from_edges = nx.DiGraph()
-    #Add nodes in order or the image will be scrambled
-    graph_from_edges.add_nodes_from(range(graph_order_and_image_dim))
-    graph_from_edges.add_edges_from(list_of_tuples)
+    #Build graph from dict_of_dicts:
+    graph_from_edges = nx.DiGraph(dict_of_dicts)
 
     #Get adjacency matrix of graph
     graph_array = nx.to_numpy_array(graph_from_edges)
