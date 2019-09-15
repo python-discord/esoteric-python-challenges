@@ -23,6 +23,8 @@ For the input "testing" we have:
  72: 1, 73: 1, 75: 1, 76: 1, 77: 1, 78: 1, 79: 1, 80: 1, 83: 1, 84: 1, 85: 1,
  86: 1, 87: 1, 88: 1, 89: 1, 90: 1, 94: 1, 95: 1, 96: 1, 97: 1, 98: 1, 99: 1}
 
+obfuscated_string will have N keys with obfuscated_string[n] returning another
+dictionary with up to N keys, for N == image_dim, for n < N.
 
 We can work backwards to get our original string :
     Make a graph with our dictionary.
