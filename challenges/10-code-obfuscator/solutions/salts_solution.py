@@ -33,8 +33,8 @@ We can work backwards to get our original string :
     Use OCR to read the image as a string.
 
 There's a catch, of course.  OCR isn't perfect: You may end up with missing or
-wrong characters.  I also doubt this qualifies as "keeping functionality
-intact", but I enjoyed it.
+wrong characters.  I doubt this qualifies as "keeping functionality intact",
+but I enjoyed it.
 """
 
 import subprocess
