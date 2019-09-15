@@ -68,10 +68,10 @@ def obfuscator(a_string):
 def deobfuscator(dict_of_dicts):
     #====Work backwards====
     #Build graph from dict_of_dicts:
-    graph_from_edges = nx.DiGraph(dict_of_dicts)
+    graph_from_dict = nx.DiGraph(dict_of_dicts)
 
     #Get adjacency matrix of graph
-    graph_array = nx.to_numpy_array(graph_from_edges)
+    graph_array = nx.to_numpy_array(graph_from_dict)
 
     #Change 1's to 255's to save as an image
     graph_array[graph_array == 1] = 255
