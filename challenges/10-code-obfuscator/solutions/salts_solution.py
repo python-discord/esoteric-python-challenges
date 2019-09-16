@@ -10,7 +10,7 @@ This obfuscation isn't too esoteric, but it's fun nonetheless:
     We use the numpy array as an adjacency matrix to make a graph.
     The dictionary (of dictionaries) of the graph is our obfuscated string.
 
-For the input "testing" we have:
+For the input "testing", we have:
 
 
 >>> obfuscated_string[10]
@@ -24,7 +24,7 @@ For the input "testing" we have:
  86: 1, 87: 1, 88: 1, 89: 1, 90: 1, 94: 1, 95: 1, 96: 1, 97: 1, 98: 1, 99: 1}
 
 obfuscated_string will have N keys with obfuscated_string[n] returning another
-dictionary with up to N keys, for N == image_dim, for n < N.
+dictionary with up to N keys, with N == image height, for n < N.
 
 We can work backwards to get our original string :
     Make a graph with our dictionary.
