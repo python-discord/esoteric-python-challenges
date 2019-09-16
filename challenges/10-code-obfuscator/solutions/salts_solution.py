@@ -78,10 +78,10 @@ def deobfuscator(dict_of_dicts):
     #Change 1's to 255's to save as an image
     graph_array[graph_array == 1] = 255
     image_from_array = Image.fromarray(graph_array).convert("L")
-    #We can send the array directly to OCR, but I like to see the image it has.
+    #We can send the array directly to OCR, but I like to see the image.
     image_from_array.save("obfuscated.png")
 
-    #OCR our image into a string
+    #Run OCR on our image
     return pytesseract.image_to_string("obfuscated.png")
 
 if __name__ == "__main__":
