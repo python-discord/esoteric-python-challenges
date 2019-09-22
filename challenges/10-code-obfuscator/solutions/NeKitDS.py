@@ -4,29 +4,13 @@ convert it to two random characters like that,
 so sum of ord() calls is equal to ord() of the plain character.
 """
 
-import random
+# one-lined function for both encoding and decoding.
+# compressed for more readability.
+# huge thanks to chilaxan for helping with it.
 
-def wrap(string: str, width: int = 2):
-    for n in range(0, len(string), width):
-        yield string[n:n+width]
+string = "(lambda s,d=0:''.join([chr(sum(map(ord,c)))for c in[s[i:i+2]for i in range(0,len(s),2)]]if d else[(lambda x:chr(x)+chr(ord(c)-x))(__import__('random').randrange(0,ord(c)))for c in s]))"
 
-def encode(string: str):
-    final = ''
-    for char in string:
-        o = ord(char)
-        x = random.randrange(0, o)
-        y = o - x
-        final += chr(x) + chr(y)
-    return final
-
-def decode(string: str):
-    final = ''
-    for chars in wrap(string):
-        final += chr(sum(map(ord, chars)))
-    return final
-
-# compressed decoder, one-lined for readability purposes
-decoder = "(lambda s:''.join(chr(sum(map(ord, c)))for c in (s[n:n+2]for n in range(0,len(s),2))))({!r})"
+encode, decoder = eval(string), string + '({!r},1)'
 
 if __name__ == '__main__':
-    print('Evaluate the following code to get the source:', decoder.format(encode(input('Enter the code to obfuscate: '))))
+    print('Evaluate the following code to get the source:', decoder.format(encode(input('Enter the code to obfuscate: '))), sep='\n')
