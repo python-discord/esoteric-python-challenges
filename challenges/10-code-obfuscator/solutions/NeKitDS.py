@@ -8,7 +8,7 @@ so sum of ord() calls is equal to ord() of the plain character.
 # compressed for more readability.
 # huge thanks to chilaxan for helping with it.
 
-string = "(lambda s,d=0:''.join([chr(sum(map(ord,c)))for c in[s[i:i+2]for i in range(0,len(s),2)]]if d else[(lambda x:chr(x)+chr(ord(c)-x))(__import__('random').randrange(0,ord(c)))for c in s]))"
+string = '(lambda s,d=0:''.join([chr(sum(map(ord,c)))for c in[s[i:i+2]for i in range(0,len(s),2)]]if d else[(lambda x:chr(x)+chr(ord(c)-x))(__import__('random').randrange(0,ord(c))if ord(c)else 0)for c in s]))'
 
 encode, decoder = eval(string), string + '({!r},1)'
 
